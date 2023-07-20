@@ -10,10 +10,6 @@ local dominantGuild = require('castle-24h/lib/dominant_guild')
 local zoneBattle = {}
 local interval = {}
 
-function zoneBattle:kickUnauthorizedPlayers()
-	return castleFunctions:kickUnauthorizedPlayersByZoneId(config.zones.battle)
-end
-
 local function broadcastInvadeMessage(playerName, guildName, dominantId, dominantName)
 	local ss = stringstream()
 	ss:append('[Castle 24 horas]: %s da guild [%s] está invadindo o castelo.', playerName, guildName)
